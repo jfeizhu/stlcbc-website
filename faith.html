@@ -1,0 +1,498 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Faith Statement | STLCBC</title>
+    <meta
+      name="description"
+      content="Faith Statement of St. Louis Chinese Baptist Church"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Noto+Sans+SC:wght@400;500;700&display=swap"
+      rel="stylesheet"
+    />
+    <style>
+      :root {
+        --bg: #f8f4ee;
+        --surface: rgba(255, 255, 255, 0.82);
+        --surface-strong: #ffffff;
+        --text: #1f2937;
+        --muted: #5b6472;
+        --brand: #ff5a5f;
+        --brand-dark: #e24a51;
+        --navy: #14263d;
+        --gold: #e8b86d;
+        --line: rgba(20, 38, 61, 0.1);
+        --shadow: 0 20px 50px rgba(20, 38, 61, 0.1);
+        --radius: 24px;
+        --max: 980px;
+      }
+
+      * {
+        box-sizing: border-box;
+      }
+      html {
+        scroll-behavior: smooth;
+      }
+      body {
+        margin: 0;
+        font-family:
+          Inter,
+          "Noto Sans SC",
+          system-ui,
+          -apple-system,
+          BlinkMacSystemFont,
+          "Segoe UI",
+          sans-serif;
+        color: var(--text);
+        background:
+          radial-gradient(
+            circle at top left,
+            rgba(255, 90, 95, 0.08),
+            transparent 28%
+          ),
+          radial-gradient(
+            circle at top right,
+            rgba(232, 184, 109, 0.12),
+            transparent 24%
+          ),
+          var(--bg);
+        line-height: 1.7;
+      }
+
+      img {
+        max-width: 100%;
+        display: block;
+      }
+      a {
+        color: inherit;
+        text-decoration: none;
+      }
+
+      .container {
+        width: min(calc(100% - 32px), var(--max));
+        margin: 0 auto;
+      }
+
+      .site-header {
+        position: sticky;
+        top: 0;
+        z-index: 50;
+        backdrop-filter: blur(18px);
+        background: rgba(248, 244, 238, 0.82);
+        border-bottom: 1px solid rgba(20, 38, 61, 0.08);
+      }
+
+      .header-inner {
+        min-height: 82px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 20px;
+      }
+
+      .brand {
+        display: flex;
+        align-items: center;
+        gap: 14px;
+        min-width: 0;
+      }
+
+      .brand img {
+        width: 58px;
+        height: 58px;
+        object-fit: contain;
+        border-radius: 16px;
+        background: white;
+        box-shadow: 0 8px 22px rgba(20, 38, 61, 0.08);
+        padding: 6px;
+      }
+
+      .brand-kicker {
+        font-size: 12px;
+        letter-spacing: 0.18em;
+        text-transform: uppercase;
+        color: var(--brand);
+        font-weight: 700;
+        margin-bottom: 2px;
+      }
+
+      .brand-title {
+        font-size: 17px;
+        font-weight: 800;
+        color: var(--navy);
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+      }
+
+      .nav {
+        display: flex;
+        align-items: center;
+        gap: 24px;
+        font-size: 14px;
+        font-weight: 600;
+        color: var(--muted);
+      }
+
+      .nav a:hover {
+        color: var(--brand);
+      }
+
+      .nav-cta {
+        padding: 11px 16px;
+        border-radius: 999px;
+        background: var(--navy);
+        color: white !important;
+        box-shadow: 0 10px 24px rgba(20, 38, 61, 0.14);
+      }
+
+      .hero {
+        padding: 28px 0 20px;
+      }
+
+      .hero-card {
+        position: relative;
+        overflow: hidden;
+        border-radius: 34px;
+        box-shadow: var(--shadow);
+        background: linear-gradient(
+          135deg,
+          rgba(20, 38, 61, 0.97),
+          rgba(20, 38, 61, 0.84)
+        );
+        color: white;
+        padding: 54px;
+      }
+
+      .hero-card::before {
+        content: "";
+        position: absolute;
+        inset: 0;
+        background: radial-gradient(
+          circle at top right,
+          rgba(255, 90, 95, 0.22),
+          transparent 30%
+        );
+        pointer-events: none;
+      }
+
+      .eyebrow {
+        color: #ffd9ca;
+        text-transform: uppercase;
+        letter-spacing: 0.18em;
+        font-size: 12px;
+        font-weight: 800;
+        margin-bottom: 12px;
+        position: relative;
+      }
+
+      h1 {
+        margin: 0;
+        font-size: clamp(2.2rem, 5vw, 4rem);
+        line-height: 1;
+        letter-spacing: -0.04em;
+        position: relative;
+      }
+
+      .hero-sub {
+        margin-top: 16px;
+        max-width: 60ch;
+        color: rgba(255, 255, 255, 0.85);
+        font-size: 1.05rem;
+        position: relative;
+      }
+
+      .content {
+        padding: 22px 0 80px;
+      }
+
+      .panel {
+        border-radius: 28px;
+        background: var(--surface);
+        border: 1px solid rgba(255, 255, 255, 0.65);
+        box-shadow: var(--shadow);
+        backdrop-filter: blur(16px);
+        padding: 34px;
+        margin-bottom: 22px;
+      }
+
+      .panel h2 {
+        margin: 0 0 18px;
+        font-size: 1.9rem;
+        color: var(--navy);
+        letter-spacing: -0.03em;
+      }
+
+      .belief-list {
+        display: grid;
+        gap: 16px;
+      }
+
+      .belief-item {
+        padding: 18px 20px;
+        border-radius: 20px;
+        background: rgba(255, 255, 255, 0.78);
+        border: 1px solid rgba(20, 38, 61, 0.08);
+      }
+
+      .belief-item p {
+        margin: 0;
+        color: var(--text);
+      }
+
+      .belief-item + .belief-item {
+        margin-top: 0;
+      }
+
+      .actions {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 12px;
+        margin-top: 24px;
+      }
+
+      .btn {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        padding: 14px 20px;
+        border-radius: 999px;
+        font-weight: 700;
+        transition:
+          transform 0.18s ease,
+          box-shadow 0.18s ease,
+          background 0.18s ease;
+      }
+
+      .btn:hover {
+        transform: translateY(-1px);
+      }
+
+      .btn-primary {
+        background: var(--brand);
+        color: white;
+        box-shadow: 0 12px 24px rgba(255, 90, 95, 0.22);
+      }
+
+      .btn-primary:hover {
+        background: var(--brand-dark);
+      }
+
+      .btn-secondary {
+        background: white;
+        border: 1px solid var(--line);
+        color: var(--navy);
+      }
+
+      .site-footer {
+        padding: 24px 0 50px;
+        color: var(--muted);
+        font-size: 0.95rem;
+      }
+
+      .footer-inner {
+        border-top: 1px solid rgba(20, 38, 61, 0.1);
+        padding-top: 24px;
+        display: flex;
+        justify-content: space-between;
+        gap: 20px;
+        align-items: center;
+      }
+
+      @media (max-width: 780px) {
+        .site-header {
+          position: static;
+        }
+        .nav {
+          display: none;
+        }
+        .hero-card {
+          padding: 34px 24px;
+          border-radius: 26px;
+        }
+        .panel {
+          padding: 24px;
+          border-radius: 22px;
+        }
+        .footer-inner {
+          flex-direction: column;
+          align-items: flex-start;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <header class="site-header">
+      <div class="container header-inner">
+        <a class="brand" href="index.html">
+          <img src="images/logo.png" alt="STLCBC logo" />
+          <div>
+            <div class="brand-kicker">STLCBC</div>
+            <div class="brand-title">St. Louis Chinese Baptist Church</div>
+          </div>
+        </a>
+        <nav class="nav">
+          <a href="index.html">Home</a>
+          <a href="faith.html">Faith Statement</a>
+          <a href="history.html">History</a>
+          <a href="pastor.html" class="nav-cta">Pastor</a>
+        </nav>
+      </div>
+    </header>
+
+    <main>
+      <section class="hero">
+        <div class="container">
+          <div class="hero-card">
+            <div class="eyebrow">What We Believe</div>
+            <h1>信仰告白<br />Faith Statement</h1>
+            <p class="hero-sub">
+              These statements summarize the core beliefs of St. Louis Chinese
+              Baptist Church in both Chinese and English.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <section class="content">
+        <div class="container">
+          <div class="panel">
+            <h2>我們相信：</h2>
+            <div class="belief-list">
+              <div class="belief-item">
+                <p>
+                  聖經是神的完備的無誤的話語，是教會和基督徒信仰生活的唯一準則（提後3：16-17）。
+                </p>
+              </div>
+              <div class="belief-item">
+                <p>
+                  耶穌基督是神成為肉身。他為我們的罪死，被埋葬，第三天從死裏復活，升天，必定再來審判活人死人（提前3：16）。
+                </p>
+              </div>
+              <div class="belief-item">
+                <p>
+                  聖靈進入到認罪悔改人的心裏，引導信徒明白聖經，以榮耀神為生活目標（約16：8-14）。
+                </p>
+              </div>
+              <div class="belief-item">
+                <p>
+                  聖父吸引人信靠他的兒子耶穌基督。神是聖潔公義的，也是慈愛憐憫的（出34：6-7）。
+                </p>
+              </div>
+              <div class="belief-item">
+                <p>
+                  神造男人和女人（創1：26-27）。人由於不榮耀神，也不感謝神,人的心完全敗壞，充滿詭詐。我們無力自救。只有相信耶穌基督，罪人才能逃避將來神的憤怒審判（弗3：14-21）。
+                </p>
+              </div>
+              <div class="belief-item">
+                <p>因信基督徒稱義，成聖，並且將來與主同在榮耀裏（羅8：30）。</p>
+              </div>
+              <div class="belief-item">
+                <p>
+                  在悖逆的世界中，聖靈借著神的話必定能保守基督徒戰勝所有嚴峻考驗，並把福音廣傳（弗3：14-21）。
+                </p>
+              </div>
+              <div class="belief-item">
+                <p>神設立地方教會成為信徒的家，是真理的柱石（提前3：15）。</p>
+              </div>
+              <div class="belief-item">
+                <p>
+                  上帝所設立的婚姻是一個盟約，是能生養的兩性關系，是一男一女、一夫一妻、一生一世的聯合，也預表基督和祂的新婦——教會，之間的盟約之愛（弗5：22-33）。
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <div class="panel">
+            <h2>We believe:</h2>
+            <div class="belief-list">
+              <div class="belief-item">
+                <p>
+                  The Bible is the inerrant and sufficient word of God, the only
+                  standard of church and Christian life (2Tim 3:16).
+                </p>
+              </div>
+              <div class="belief-item">
+                <p>
+                  Jesus Christ is God in flesh. He died for our sin, resurrected
+                  on the third day, was buried and ascended. He will come a
+                  second time to judge the living and the dead (1Tim 3:16).
+                </p>
+              </div>
+              <div class="belief-item">
+                <p>
+                  The Holy Spirit abides in the repentant heart, and leads
+                  believers to understand the Bible, and helps them live a life
+                  glorifying God (John 16:8-14).
+                </p>
+              </div>
+              <div class="belief-item">
+                <p>
+                  The Holy Father draws people to believe in Jesus Christ. God
+                  is holy and just, he is also loving and merciful (Exo 34:6-7).
+                </p>
+              </div>
+              <div class="belief-item">
+                <p>
+                  God created man and woman (Gen 1:26-27). Because humans do not
+                  glorify God nor thank him, man’s heart is completely corrupt
+                  and crafty. We cannot save ourselves. Only through believing
+                  Jesus Christ can we escape the angry judgment of God (Rom
+                  3:9-25).
+                </p>
+              </div>
+              <div class="belief-item">
+                <p>
+                  By faith in Jesus a Christian goes through justification,
+                  sanctification and glorification (Rom 8:30).
+                </p>
+              </div>
+              <div class="belief-item">
+                <p>
+                  In the rebellious world, the Holy Spirit can help Christians
+                  overcome any ordeal through God’s word, and help them preach
+                  the gospel (Eph 3:14-21).
+                </p>
+              </div>
+              <div class="belief-item">
+                <p>
+                  God ordains the local church to be the family of believers,
+                  and the pillar of truth (1Tim 3:15).
+                </p>
+              </div>
+              <div class="belief-item">
+                <p>
+                  God ordains marriage to be a covenant between a man and a
+                  woman, a husband and a wife. Marriage illustrates how Christ
+                  loves his bride—the church (Eph 5:22-33).
+                </p>
+              </div>
+            </div>
+
+            <div class="actions">
+              <a class="btn btn-primary" href="index.html">Back to Home</a>
+              <a class="btn btn-secondary" href="mailto:haimark2003@yahoo.com"
+                >Contact Us</a
+              >
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div class="container footer-inner">
+        <div>
+          <strong>聖路易華人浸信會 · St. Louis Chinese Baptist Church</strong
+          ><br />
+          908 Jungermann Rd, St Peters, MO 63376
+        </div>
+        <div>© 2026 STLCBC. All rights reserved.</div>
+      </div>
+    </footer>
+  </body>
+</html>
