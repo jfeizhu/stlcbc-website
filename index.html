@@ -146,6 +146,38 @@
         color: var(--brand);
       }
 
+      .dropdown {
+        position: relative;
+      }
+
+      .dropdown-menu {
+        position: absolute;
+        top: 100%;
+        left: 0;
+        background: white;
+        border-radius: 12px;
+        box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+        padding: 10px 0;
+        display: none;
+        min-width: 220px;
+      }
+
+      .dropdown-menu a {
+        display: block;
+        padding: 10px 16px;
+        font-size: 14px;
+        color: var(--text);
+      }
+
+      .dropdown-menu a:hover {
+        background: #f3f4f6;
+        color: var(--brand);
+      }
+
+      .dropdown:hover .dropdown-menu {
+        display: block;
+      }
+
       .nav-cta {
         padding: 11px 16px;
         border-radius: 999px;
@@ -682,7 +714,14 @@
           </div>
         </a>
         <nav class="nav">
-          <a href="#about">About</a>
+          <div class="dropdown">
+            <a href="#about">About</a>
+            <div class="dropdown-menu">
+              <a href="#">Faith Statement 信仰告白</a>
+              <a href="#">History 教會歷史</a>
+              <a href="#">Pastor 牧師</a>
+            </div>
+          </div>
           <a href="#worship">Worship</a>
           <a href="#gallery">Gallery</a>
           <a href="#visit" class="nav-cta">Plan a Visit</a>
