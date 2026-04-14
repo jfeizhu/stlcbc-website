@@ -1,0 +1,658 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>History | STLCBC</title>
+    <meta
+      name="description"
+      content="History of St. Louis Chinese Baptist Church"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Noto+Sans+SC:wght@400;500;700&display=swap"
+      rel="stylesheet"
+    />
+    <style>
+      .gallery {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+        gap: 16px;
+        margin-bottom: 24px;
+      }
+
+      .gallery img {
+        width: 100%;
+        height: 220px;
+        object-fit: cover;
+        border-radius: 20px;
+        box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+        transition: transform 0.25s ease;
+      }
+
+      .gallery img:hover {
+        transform: scale(1.03);
+      }
+      :root {
+        --bg: #f8f4ee;
+        --surface: rgba(255, 255, 255, 0.82);
+        --text: #1f2937;
+        --muted: #5b6472;
+        --brand: #ff5a5f;
+        --brand-dark: #e24a51;
+        --navy: #14263d;
+        --line: rgba(20, 38, 61, 0.1);
+        --shadow: 0 20px 50px rgba(20, 38, 61, 0.1);
+        --max: 1080px;
+      }
+
+      * {
+        box-sizing: border-box;
+      }
+      html {
+        scroll-behavior: smooth;
+      }
+      body {
+        margin: 0;
+        font-family:
+          Inter,
+          "Noto Sans SC",
+          system-ui,
+          -apple-system,
+          BlinkMacSystemFont,
+          "Segoe UI",
+          sans-serif;
+        color: var(--text);
+        background:
+          radial-gradient(
+            circle at top left,
+            rgba(255, 90, 95, 0.08),
+            transparent 28%
+          ),
+          radial-gradient(
+            circle at top right,
+            rgba(232, 184, 109, 0.12),
+            transparent 24%
+          ),
+          var(--bg);
+        line-height: 1.75;
+      }
+
+      img {
+        max-width: 100%;
+        display: block;
+      }
+      a {
+        color: inherit;
+        text-decoration: none;
+      }
+
+      .container {
+        width: min(calc(100% - 32px), var(--max));
+        margin: 0 auto;
+      }
+
+      .site-header {
+        position: sticky;
+        top: 0;
+        z-index: 50;
+        backdrop-filter: blur(18px);
+        background: rgba(248, 244, 238, 0.82);
+        border-bottom: 1px solid rgba(20, 38, 61, 0.08);
+      }
+
+      .header-inner {
+        min-height: 82px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 20px;
+      }
+
+      .brand {
+        display: flex;
+        align-items: center;
+        gap: 14px;
+        min-width: 0;
+      }
+
+      .brand img {
+        width: 58px;
+        height: 58px;
+        object-fit: contain;
+        border-radius: 16px;
+        background: white;
+        box-shadow: 0 8px 22px rgba(20, 38, 61, 0.08);
+        padding: 6px;
+      }
+
+      .brand-kicker {
+        font-size: 12px;
+        letter-spacing: 0.18em;
+        text-transform: uppercase;
+        color: var(--brand);
+        font-weight: 700;
+        margin-bottom: 2px;
+      }
+
+      .brand-title {
+        font-size: 17px;
+        font-weight: 800;
+        color: var(--navy);
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+      }
+
+      .nav {
+        display: flex;
+        align-items: center;
+        gap: 24px;
+        font-size: 14px;
+        font-weight: 600;
+        color: var(--muted);
+      }
+
+      .nav a:hover {
+        color: var(--brand);
+      }
+
+      .nav-cta {
+        padding: 11px 16px;
+        border-radius: 999px;
+        background: var(--navy);
+        color: white !important;
+        box-shadow: 0 10px 24px rgba(20, 38, 61, 0.14);
+      }
+
+      .hero {
+        padding: 28px 0 20px;
+      }
+
+      .hero-card {
+        position: relative;
+        overflow: hidden;
+        border-radius: 34px;
+        box-shadow: var(--shadow);
+        background: linear-gradient(
+          135deg,
+          rgba(20, 38, 61, 0.97),
+          rgba(20, 38, 61, 0.84)
+        );
+        color: white;
+        padding: 54px;
+      }
+
+      .hero-card::before {
+        content: "";
+        position: absolute;
+        inset: 0;
+        background: radial-gradient(
+          circle at top right,
+          rgba(255, 90, 95, 0.22),
+          transparent 30%
+        );
+        pointer-events: none;
+      }
+
+      .eyebrow {
+        color: #ffd9ca;
+        text-transform: uppercase;
+        letter-spacing: 0.18em;
+        font-size: 12px;
+        font-weight: 800;
+        margin-bottom: 12px;
+        position: relative;
+      }
+
+      h1 {
+        margin: 0;
+        font-size: clamp(2.2rem, 5vw, 4rem);
+        line-height: 1;
+        letter-spacing: -0.04em;
+        position: relative;
+      }
+
+      .hero-sub {
+        margin-top: 16px;
+        max-width: 62ch;
+        color: rgba(255, 255, 255, 0.85);
+        font-size: 1.05rem;
+        position: relative;
+      }
+
+      .content {
+        padding: 22px 0 80px;
+      }
+
+      .quote-panel,
+      .timeline,
+      .story-panel {
+        border-radius: 28px;
+        background: var(--surface);
+        border: 1px solid rgba(255, 255, 255, 0.65);
+        box-shadow: var(--shadow);
+        backdrop-filter: blur(16px);
+        padding: 30px;
+        margin-bottom: 22px;
+      }
+
+      .quote-panel {
+        text-align: center;
+        background: linear-gradient(
+          135deg,
+          rgba(255, 255, 255, 0.85),
+          rgba(255, 245, 240, 0.95)
+        );
+      }
+
+      .quote-panel p {
+        margin: 8px 0;
+        font-size: 1.15rem;
+        color: var(--navy);
+        font-weight: 600;
+      }
+
+      .timeline h2,
+      .story-panel h2 {
+        margin: 0 0 20px;
+        font-size: 1.9rem;
+        color: var(--navy);
+        letter-spacing: -0.03em;
+      }
+
+      .timeline-list {
+        display: grid;
+        gap: 16px;
+      }
+
+      .timeline-item {
+        display: grid;
+        grid-template-columns: 120px 1fr;
+        gap: 18px;
+        align-items: start;
+        padding: 18px 20px;
+        border-radius: 22px;
+        background: rgba(255, 255, 255, 0.78);
+        border: 1px solid rgba(20, 38, 61, 0.08);
+      }
+
+      .year {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        min-height: 48px;
+        padding: 10px 14px;
+        border-radius: 999px;
+        background: rgba(255, 90, 95, 0.1);
+        color: var(--brand);
+        font-weight: 800;
+        letter-spacing: 0.04em;
+      }
+
+      .timeline-item p,
+      .story-panel p {
+        margin: 0;
+        color: var(--text);
+      }
+
+      .story-grid {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 18px;
+      }
+
+      .lang-card {
+        padding: 22px;
+        border-radius: 22px;
+        background: rgba(255, 255, 255, 0.78);
+        border: 1px solid rgba(20, 38, 61, 0.08);
+      }
+
+      .lang-card h3 {
+        margin: 0 0 16px;
+        font-size: 1.3rem;
+        color: var(--navy);
+      }
+
+      .lang-card p + p {
+        margin-top: 14px;
+      }
+
+      .actions {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 12px;
+        margin-top: 24px;
+      }
+
+      .btn {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        padding: 14px 20px;
+        border-radius: 999px;
+        font-weight: 700;
+        transition:
+          transform 0.18s ease,
+          box-shadow 0.18s ease,
+          background 0.18s ease;
+      }
+
+      .btn:hover {
+        transform: translateY(-1px);
+      }
+
+      .btn-primary {
+        background: var(--brand);
+        color: white;
+        box-shadow: 0 12px 24px rgba(255, 90, 95, 0.22);
+      }
+
+      .btn-primary:hover {
+        background: var(--brand-dark);
+      }
+
+      .btn-secondary {
+        background: white;
+        border: 1px solid var(--line);
+        color: var(--navy);
+      }
+
+      .site-footer {
+        padding: 24px 0 50px;
+        color: var(--muted);
+        font-size: 0.95rem;
+      }
+
+      .footer-inner {
+        border-top: 1px solid rgba(20, 38, 61, 0.1);
+        padding-top: 24px;
+        display: flex;
+        justify-content: space-between;
+        gap: 20px;
+        align-items: center;
+      }
+
+      @media (max-width: 900px) {
+        .story-grid {
+          grid-template-columns: 1fr;
+        }
+      }
+
+      @media (max-width: 780px) {
+        .site-header {
+          position: static;
+        }
+        .nav {
+          display: none;
+        }
+        .hero-card {
+          padding: 34px 24px;
+          border-radius: 26px;
+        }
+        .quote-panel,
+        .timeline,
+        .story-panel {
+          padding: 24px;
+          border-radius: 22px;
+        }
+        .timeline-item {
+          grid-template-columns: 1fr;
+        }
+        .footer-inner {
+          flex-direction: column;
+          align-items: flex-start;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <header class="site-header">
+      <div class="container header-inner">
+        <a class="brand" href="index.html">
+          <img src="images/logo.png" alt="STLCBC logo" />
+          <div>
+            <div class="brand-kicker">STLCBC</div>
+            <div class="brand-title">St. Louis Chinese Baptist Church</div>
+          </div>
+        </a>
+        <nav class="nav">
+          <a href="index.html">Home</a>
+          <a href="faith.html">Faith Statement</a>
+          <a href="history.html">History</a>
+          <a href="pastor.html" class="nav-cta">Pastor</a>
+        </nav>
+      </div>
+    </header>
+
+    <main>
+      <section class="hero">
+        <div class="container">
+          <div class="hero-card">
+            <div class="eyebrow">Our Story</div>
+            <h1>教會歷史<br />History</h1>
+            <p class="hero-sub">
+              From a small Chinese Bible study mission in 1978 to a church
+              family worshiping in St. Peters today, this page tells the story
+              of God’s faithful leading through the years.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <section class="content">
+        <div class="container">
+          <div class="quote-panel">
+            <div class="gallery">
+              <img src="images/history/1.jpg" alt="Church history photo" />
+              <img src="images/history/2.jpg" alt="Church history photo" />
+              <img src="images/history/3.jpg" alt="Church history photo" />
+              <img src="images/history/4.jpg" alt="Church history photo" />
+              <img src="images/history/5.jpg" alt="Church history photo" />
+              <img src="images/history/6.jpg" alt="Church history photo" />
+              <img src="images/history/7.jpg" alt="Church history photo" />
+              <img src="images/history/8.jpg" alt="Church history photo" />
+              <img src="images/history/9.jpg" alt="Church history photo" />
+              <img src="images/history/10.jpg" alt="Church history photo" />
+              <img src="images/history/11.jpg" alt="Church history photo" />
+              <img src="images/history/12.jpg" alt="Church history photo" />
+              <img src="images/history/13.jpg" alt="Church history photo" />
+              <img src="images/history/14.jpg" alt="Church history photo" />
+              <img src="images/history/15.jpg" alt="Church history photo" />
+              <img src="images/history/16.jpg" alt="Church history photo" />
+              <img src="images/history/17.jpg" alt="Church history photo" />
+              <img src="images/history/18.jpg" alt="Church history photo" />
+              <img src="images/history/19.jpg" alt="Church history photo" />
+              <img src="images/history/20.jpg" alt="Church history photo" />
+              <img src="images/history/21.jpg" alt="Church history photo" />
+              <img src="images/history/22.jpg" alt="Church history photo" />
+            </div>
+            <p>今天, 我們仰望上帝繼續的保守與祝福,</p>
+            <p>帶領我們繼續邁向「以愛建造,承接神的應許」。</p>
+            <p>
+              Today, we are looking to God for His continued protection and
+              blessing,
+            </p>
+            <p>
+              as He leads us forward to “Build with Love, Claim God’s Promise.”
+            </p>
+          </div>
+
+          <div class="timeline">
+            <h2>歷程摘要 / Timeline</h2>
+            <div class="timeline-list">
+              <div class="timeline-item">
+                <div class="year">1978</div>
+                <p>
+                  教會以中文查經事工開始。<br />Our church began as a Chinese
+                  Bible study mission.
+                </p>
+              </div>
+              <div class="timeline-item">
+                <div class="year">1979</div>
+                <p>
+                  1979年5月6日正式註冊成立為聖路易華人浸信會。游天度牧師成為本會首任牧者。<br />On
+                  May 6, 1979, the church was officially incorporated as St.
+                  Louis Chinese Baptist Church, and Pastor Joseph Yu became the
+                  first pastor.
+                </p>
+              </div>
+              <div class="timeline-item">
+                <div class="year">1991</div>
+                <p>
+                  靠著神的恩典，教會購買位於 Ashby Road
+                  的第一棟屬於自己的教堂。<br />By God’s grace, the congregation
+                  purchased its first church building on Ashby Road.
+                </p>
+              </div>
+              <div class="timeline-item">
+                <div class="year">1996–1997</div>
+                <p>
+                  教會展開擴建工程，並於1997年完成四間新主日學教室的擴建與獻堂。黃應傑牧師於1996年12月成為第二位全職牧者。<br />The
+                  church expanded the building, added four Sunday school
+                  classrooms, and dedicated the completed project in 1997.
+                  Pastor Ying-Kit Wong became the second full-time pastor in
+                  December 1996.
+                </p>
+              </div>
+              <div class="timeline-item">
+                <div class="year">2004–2005</div>
+                <p>
+                  因著向西郊華人社區傳福音的異象，教會出售 Ashby Road
+                  教堂，暫時借用 Ballwin Baptist Church 及 Westminster Christian
+                  Academy 的場地聚會。<br />With a vision to reach the growing
+                  Chinese community in West County, the church sold the Ashby
+                  Road property and temporarily worshiped at Ballwin Baptist
+                  Church and Westminster Christian Academy.
+                </p>
+              </div>
+              <div class="timeline-item">
+                <div class="year">2008</div>
+                <p>
+                  神帶領教會在 St. Peters
+                  找到新的會址。自2008年6月起，會眾一直在這座美麗的教堂敬拜神直到如今。<br />God
+                  led the church to a new building in St. Peters, where the
+                  congregation has worshiped since June 2008.
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <div class="story-panel">
+            <h2>完整歷史 / Full History</h2>
+            <div class="story-grid">
+              <div class="lang-card">
+                <h3>中文</h3>
+                <p>
+                  我們的教會於1978年2月以中文查經事工開始,並於1979年5月6日正式註冊成立為聖路易華人浸信會(St.
+                  Louis Chinese Baptist Church –
+                  STLCBC)。游天度牧師蒙主呼召,成為本會首任牧者,忠心牧養直到1995年退休。
+                </p>
+                <p>
+                  在教會初期的數年間,我們借用了位於 Creve Coeur
+                  的以馬內利浸信會地下室作為主日崇拜場所。不久,以馬內利浸信會解散,並將其教產捐贈給聖路易都會浸信聯會。因此,我們將崇拜地點遷至原教堂旁的一棟小牧師樓,因聯會將原教堂建築改為他們的辦公室。
+                </p>
+                <p>
+                  1991年5月,靠著神的恩典,並在眾弟兄姊妹的代禱與信心中,我們在
+                  Ashby Road(位於
+                  Page大道以北、Lindbergh大道以東)購買了我們第一棟屬於自己的教堂。隨著會眾不斷增長,教堂空間很快便不敷使用。1996年,在本會弟兄姊妹及
+                  Ferguson
+                  第一浸信會的協助下,我們開始擴建教堂。同年12月,主呼召黃應傑牧師成為本會第二位全職牧者。經過數月的辛勞與奉獻,包括四間新主日學教室的擴建工程,終於在1997年5月完成並舉行獻堂典禮。
+                </p>
+                <p>
+                  感謝主,自教堂擴建後,會眾持續穩定增長。2004
+                  年秋季,神賜給我們一個共同的異象——向西郊迅速成長的華人社區傳福音。我們再次憑信心順服神的引導,決定出售
+                  Ashby 教堂,遷往西區,展開一段如同以色列民般的信心之旅。
+                </p>
+                <p>
+                  約有一年的時間,Ballwin
+                  浸信會滿有主的愛心,慷慨讓我們使用他們的設施來舉行主日崇拜與主日學。2005
+                  年,我們租用了 Westminster Christian Academy
+                  西區校園二樓的空間和數間課室作為聚會場所,同時持續禱告,尋求神的帶領,為教會預備長期敬拜的地點。
+                </p>
+                <p>
+                  神真的是信實的!祂垂聽了我們的禱告,親自引領我們在 St. Peters
+                  找到新的會址。我們自2008年6月起,便在這座美麗的教堂中敬拜神,直到如今。
+                </p>
+              </div>
+              <div class="lang-card">
+                <h3>English</h3>
+                <p>
+                  Our church began in February 1978 as a Chinese Bible study
+                  mission and was officially incorporated as the St. Louis
+                  Chinese Baptist Church (STLCBC) on May 6, 1979. Pastor Joseph
+                  Yu was called by the Lord to be our first pastor, faithfully
+                  shepherding the congregation until his retirement in 1995.
+                </p>
+                <p>
+                  In the early years, we held our Sunday worship services in the
+                  borrowed basement of Emmanuel Baptist Church in Creve Coeur.
+                  Not long after, Emmanuel Baptist Church disbanded and donated
+                  their property to the St. Louis Metro Baptist Association. As
+                  a result, we moved our services into a small parsonage next to
+                  the original church building, which the association had
+                  converted into their new offices.
+                </p>
+                <p>
+                  In May 1991, by God’s grace and through the faithful prayers
+                  and step of faith from our congregation, we purchased our
+                  first church building on Ashby Road—located north of Page
+                  Avenue and just east of Lindbergh Boulevard. As our
+                  congregation continued to grow, we soon outgrew the original
+                  building. In 1996, with the help of brothers and sisters from
+                  the First Baptist Church of Ferguson and the dedicated labor
+                  of our own members, we began an expansion project. That same
+                  December, the Lord called Pastor Ying-Kit Wong to serve as our
+                  second full-time pastor. After months of hard work and
+                  commitment, the extension—including four new Sunday school
+                  classrooms—was completed and dedicated in May 1997.
+                </p>
+                <p>
+                  Praise the Lord! Since the expansion, our congregation
+                  continued to grow steadily. In the fall of 2004, with a shared
+                  vision to reach the rapidly growing Chinese community in West
+                  County, we once again stepped out in faith. The congregation
+                  made the bold decision to sell the Ashby Road church and
+                  relocate to West County, embarking on a journey of faith
+                  reminiscent of the Israelites.
+                </p>
+                <p>
+                  For nearly a year, Ballwin Baptist Church generously allowed
+                  us to use their facilities for Sunday worship and Sunday
+                  school classes. In 2005, we began worshiping in a rented space
+                  on the second floor of Westminster Christian Academy’s West
+                  County campus, while continuing to pray earnestly for a
+                  permanent location where we could worship the Lord.
+                </p>
+                <p>
+                  God is truly faithful! He heard our prayers and led us to a
+                  new church building in St. Peters. Since June 2008, we have
+                  been worshiping in this beautiful sanctuary—and we continue to
+                  praise Him for His abundant provision.
+                </p>
+              </div>
+            </div>
+
+            <div class="actions">
+              <a class="btn btn-primary" href="index.html">Back to Home</a>
+              <a class="btn btn-secondary" href="faith.html">Faith Statement</a>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div class="container footer-inner">
+        <div>
+          <strong>聖路易華人浸信會 · St. Louis Chinese Baptist Church</strong
+          ><br />
+          908 Jungermann Rd, St Peters, MO 63376
+        </div>
+        <div>© 2026 STLCBC. All rights reserved.</div>
+      </div>
+    </footer>
+  </body>
+</html>
