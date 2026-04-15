@@ -768,6 +768,66 @@ h3 {
   gap: 18px;
 }
 
+.profile-grid,
+.pastor-highlights {
+  display: grid;
+  gap: 18px;
+}
+
+.profile-grid {
+  grid-template-columns: 0.92fr 1.08fr;
+  align-items: stretch;
+}
+
+.profile-media,
+.highlight-card {
+  background: rgba(255, 255, 255, 0.78);
+  border: 1px solid rgba(20, 38, 61, 0.08);
+  border-radius: 22px;
+  overflow: hidden;
+}
+
+.profile-media img {
+  width: 100%;
+  height: 100%;
+  min-height: 360px;
+  object-fit: cover;
+}
+
+.profile-copy {
+  display: grid;
+  gap: 18px;
+}
+
+.profile-intro {
+  padding: 22px;
+  border-radius: 22px;
+  background: rgba(255, 255, 255, 0.78);
+  border: 1px solid rgba(20, 38, 61, 0.08);
+}
+
+.profile-intro h2,
+.highlight-card h3 {
+  margin: 0;
+  color: var(--navy);
+}
+
+.profile-intro p {
+  margin: 14px 0 0;
+}
+
+.pastor-highlights {
+  grid-template-columns: repeat(3, 1fr);
+}
+
+.highlight-card {
+  padding: 22px;
+}
+
+.highlight-card p {
+  margin: 10px 0 0;
+}
+
 .lang-card,
 .belief-item {
   padding: 22px;
@@ -897,7 +957,9 @@ h3 {
   .gallery-layout,
   .visit-card,
   .ministry-grid,
-  .schedule-grid {
+  .schedule-grid,
+  .profile-grid,
+  .pastor-highlights {
     grid-template-columns: 1fr;
   }
 
@@ -983,7 +1045,10 @@ h3 {
   .timeline,
   .story-panel,
   .lang-card,
-  .belief-item {
+  .belief-item,
+  .profile-media,
+  .highlight-card,
+  .profile-intro {
     border-radius: 22px;
   }
 
@@ -1004,6 +1069,10 @@ h3 {
 
   .gallery-stack img {
     height: 220px;
+  }
+
+  .profile-media img {
+    min-height: 260px;
   }
 
   .footer-inner {
