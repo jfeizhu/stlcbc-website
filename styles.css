@@ -838,6 +838,16 @@ h3 {
   line-height: 1.62;
 }
 
+.full-history-grid {
+  grid-template-columns: 0.78fr 1.22fr;
+  margin-top: 18px;
+}
+
+.full-history-grid .lang-card {
+  line-height: 1.56;
+  font-size: 0.98rem;
+}
+
 .pastor-highlights {
   grid-template-columns: repeat(3, 1fr);
 }
