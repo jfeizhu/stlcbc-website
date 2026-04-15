@@ -775,8 +775,8 @@ h3 {
 }
 
 .profile-grid {
-  grid-template-columns: 0.92fr 1.08fr;
-  align-items: stretch;
+  grid-template-columns: 1.05fr 0.95fr;
+  align-items: start;
 }
 
 .profile-media,
@@ -787,10 +787,18 @@ h3 {
   overflow: hidden;
 }
 
+.profile-media {
+  padding: 18px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
 .profile-media img {
   width: 100%;
-  height: 100%;
-  min-height: 360px;
+  height: auto;
+  min-height: 0;
+  max-height: 720px;
   object-fit: contain;
   background: white;
 }
@@ -815,6 +823,10 @@ h3 {
 
 .profile-intro p {
   margin: 14px 0 0;
+}
+
+.profile-bio-grid {
+  grid-template-columns: 1fr;
 }
 
 .pastor-highlights {
