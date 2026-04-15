@@ -830,8 +830,12 @@ h3 {
 }
 
 .profile-bio-grid {
-  grid-template-columns: 1fr 1fr;
+  grid-template-columns: 0.84fr 1.16fr;
   margin-top: 18px;
+}
+
+.profile-bio-grid .lang-card {
+  line-height: 1.62;
 }
 
 .pastor-highlights {
