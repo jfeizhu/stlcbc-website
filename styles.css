@@ -768,15 +768,9 @@ h3 {
   gap: 18px;
 }
 
-.profile-grid,
 .pastor-highlights {
   display: grid;
   gap: 18px;
-}
-
-.profile-grid {
-  grid-template-columns: 1.05fr 0.95fr;
-  align-items: start;
 }
 
 .profile-media,
@@ -798,14 +792,9 @@ h3 {
   width: 100%;
   height: auto;
   min-height: 0;
-  max-height: 720px;
+  max-height: 860px;
   object-fit: contain;
   background: white;
-}
-
-.profile-copy {
-  display: grid;
-  gap: 18px;
 }
 
 .profile-intro {
@@ -825,8 +814,24 @@ h3 {
   margin: 14px 0 0;
 }
 
+.profile-photo-panel {
+  padding: 18px;
+}
+
+.profile-hero-media {
+  padding: 0;
+  background: white;
+}
+
+.profile-hero-media img {
+  display: block;
+  width: 100%;
+  max-height: none;
+}
+
 .profile-bio-grid {
-  grid-template-columns: 1fr;
+  grid-template-columns: 1fr 1fr;
+  margin-top: 18px;
 }
 
 .pastor-highlights {
