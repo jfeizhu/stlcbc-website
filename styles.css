@@ -451,8 +451,25 @@ h3 {
   background: linear-gradient(135deg, #fff6ef, #ffffff 60%);
 }
 
+.section-tight {
+  padding-top: 0;
+}
+
 .hiring-contact-list {
   grid-template-columns: repeat(3, 1fr);
+}
+
+.latest-event-panel {
+  background:
+    radial-gradient(circle at top right, rgba(198, 137, 68, 0.18), transparent 36%),
+    linear-gradient(160deg, rgba(255, 255, 255, 0.98), rgba(246, 249, 252, 0.96));
+}
+
+.latest-event-meta {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 16px;
+  margin-top: 22px;
 }
 
 .download-link {
@@ -1126,6 +1143,38 @@ h3 {
   gap: 28px;
 }
 
+.event-archive-section {
+  margin-top: 42px;
+}
+
+.event-archive-list {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 18px;
+  margin-top: 18px;
+}
+
+.event-archive-card {
+  scroll-margin-top: 104px;
+  background:
+    linear-gradient(180deg, rgba(255, 255, 255, 0.98), rgba(247, 249, 252, 0.92));
+  border: 1px solid rgba(20, 38, 61, 0.08);
+  border-radius: 24px;
+  padding: 24px;
+  box-shadow: 0 18px 44px rgba(20, 38, 61, 0.07);
+}
+
+.event-archive-card h3 {
+  margin: 0 0 12px;
+  color: var(--navy);
+  font-size: 1.2rem;
+  line-height: 1.35;
+}
+
+.event-archive-card p {
+  line-height: 1.7;
+}
+
 .event-year-group {
   display: grid;
   grid-template-columns: 110px minmax(0, 1fr);
@@ -1382,7 +1431,9 @@ h3 {
   .session-grid,
   .children-gallery,
   .detail-grid,
-  .event-overview {
+  .event-overview,
+  .event-archive-list,
+  .latest-event-meta {
     grid-template-columns: 1fr;
   }
 
