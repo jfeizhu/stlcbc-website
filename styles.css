@@ -447,6 +447,14 @@ h3 {
   margin-top: 20px;
 }
 
+.hiring-panel {
+  background: linear-gradient(135deg, #fff6ef, #ffffff 60%);
+}
+
+.hiring-contact-list {
+  grid-template-columns: repeat(3, 1fr);
+}
+
 .contact-item {
   padding: 16px 18px;
   border-radius: 20px;
@@ -991,7 +999,8 @@ h3 {
   .ministry-grid,
   .schedule-grid,
   .profile-grid,
-  .pastor-highlights {
+  .pastor-highlights,
+  .hiring-contact-list {
     grid-template-columns: 1fr;
   }
 
