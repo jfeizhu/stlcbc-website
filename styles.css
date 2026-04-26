@@ -455,6 +455,12 @@ h3 {
   padding-top: 0;
 }
 
+.top-panels {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 18px;
+}
+
 .hiring-contact-list {
   grid-template-columns: repeat(3, 1fr);
 }
@@ -1710,6 +1716,7 @@ h3 {
   .session-grid,
   .children-gallery,
   .detail-grid,
+  .top-panels,
   .event-feature,
   .event-spotlight-grid,
   .event-overview,
