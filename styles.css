@@ -1379,6 +1379,71 @@ h3 {
   line-height: 1.35;
 }
 
+.lightbox {
+  position: fixed;
+  inset: 0;
+  display: none;
+  align-items: center;
+  justify-content: center;
+  padding: 24px;
+  z-index: 1000;
+}
+
+.lightbox.is-open {
+  display: flex;
+}
+
+.lightbox-backdrop {
+  position: absolute;
+  inset: 0;
+  border: 0;
+  background: rgba(12, 25, 40, 0.74);
+}
+
+.lightbox-dialog {
+  position: relative;
+  z-index: 1;
+  width: min(92vw, 980px);
+  max-height: 90vh;
+  padding: 18px 18px 22px;
+  border-radius: 28px;
+  background: rgba(255, 255, 255, 0.98);
+  box-shadow: 0 30px 80px rgba(12, 25, 40, 0.28);
+  display: grid;
+  gap: 14px;
+}
+
+.lightbox-label {
+  padding-right: 90px;
+  font-size: 0.85rem;
+  text-transform: uppercase;
+  letter-spacing: 0.14em;
+  color: var(--brand);
+  font-weight: 800;
+}
+
+.lightbox-dialog img {
+  width: 100%;
+  max-height: calc(90vh - 84px);
+  object-fit: contain;
+  border-radius: 20px;
+  background: #f4f7fb;
+}
+
+.lightbox-close {
+  position: absolute;
+  top: 16px;
+  right: 16px;
+  min-height: 40px;
+  padding: 0 14px;
+  border-radius: 999px;
+  border: 1px solid rgba(20, 38, 61, 0.1);
+  background: #fff;
+  color: var(--navy);
+  font-weight: 700;
+  cursor: pointer;
+}
+
 .event-year-group {
   display: grid;
   grid-template-columns: 110px minmax(0, 1fr);
