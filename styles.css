@@ -1082,35 +1082,155 @@ h3 {
   font-weight: 600;
 }
 
-.events-grid {
+.event-overview {
   display: grid;
-  grid-template-columns: repeat(2, 1fr);
+  grid-template-columns: 1.15fr 0.8fr 1.05fr;
   gap: 18px;
-  margin-top: 18px;
+  margin-top: 22px;
 }
 
-.event-card {
-  background: rgba(255, 255, 255, 0.84);
+.event-overview-card {
+  background:
+    linear-gradient(180deg, rgba(255, 255, 255, 0.96), rgba(255, 255, 255, 0.82));
   border: 1px solid rgba(20, 38, 61, 0.08);
   border-radius: 24px;
-  padding: 24px;
+  padding: 22px 24px;
   box-shadow: 0 18px 44px rgba(20, 38, 61, 0.07);
 }
 
-.event-date {
-  margin-bottom: 10px;
-  font-size: 12px;
+.event-overview-card p {
+  line-height: 1.72;
+}
+
+.event-tag-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.event-tag {
+  display: inline-flex;
+  align-items: center;
+  padding: 8px 12px;
+  border-radius: 999px;
+  background: rgba(198, 137, 68, 0.12);
+  border: 1px solid rgba(198, 137, 68, 0.18);
+  color: var(--navy);
+  font-size: 0.92rem;
+  font-weight: 700;
+}
+
+.events-timeline {
+  margin-top: 30px;
+  display: grid;
+  gap: 28px;
+}
+
+.event-year-group {
+  display: grid;
+  grid-template-columns: 110px minmax(0, 1fr);
+  gap: 24px;
+  align-items: start;
+}
+
+.event-year {
+  position: sticky;
+  top: 100px;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 56px;
+  padding: 12px 14px;
+  border-radius: 18px;
+  background: linear-gradient(135deg, var(--navy), #27476a);
+  color: #fff;
+  font-size: 1.1rem;
+  font-weight: 800;
+  letter-spacing: 0.06em;
+  box-shadow: 0 16px 36px rgba(20, 38, 61, 0.22);
+}
+
+.event-year-list {
+  display: grid;
+  gap: 14px;
+}
+
+.event-row {
+  display: grid;
+  grid-template-columns: 86px minmax(0, 1fr) auto;
+  gap: 18px;
+  align-items: center;
+  padding: 18px;
+  border-radius: 24px;
+  border: 1px solid rgba(20, 38, 61, 0.08);
+  background:
+    linear-gradient(180deg, rgba(255, 255, 255, 0.96), rgba(244, 247, 251, 0.88));
+  box-shadow: 0 18px 44px rgba(20, 38, 61, 0.07);
+}
+
+.event-date-badge {
+  display: grid;
+  justify-items: center;
+  gap: 4px;
+  padding: 12px 10px;
+  border-radius: 18px;
+  background: rgba(198, 137, 68, 0.12);
+  border: 1px solid rgba(198, 137, 68, 0.18);
+}
+
+.event-date-month {
+  font-size: 0.72rem;
+  text-transform: uppercase;
+  letter-spacing: 0.14em;
+  color: var(--brand);
+  font-weight: 800;
+}
+
+.event-date-day {
+  font-size: 1.6rem;
+  line-height: 1;
+  color: var(--navy);
+  font-weight: 800;
+}
+
+.event-row-copy h3 {
+  margin: 4px 0 0;
+  color: var(--navy);
+  font-size: 1.18rem;
+  line-height: 1.35;
+}
+
+.event-row-meta {
+  font-size: 0.82rem;
   text-transform: uppercase;
   letter-spacing: 0.12em;
   color: var(--brand);
   font-weight: 800;
 }
 
-.event-card h3 {
-  margin: 0 0 18px;
+.event-link {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 44px;
+  padding: 0 18px;
+  border-radius: 999px;
+  border: 1px solid rgba(20, 38, 61, 0.1);
+  background: #fff;
   color: var(--navy);
-  font-size: 1.2rem;
-  line-height: 1.35;
+  text-decoration: none;
+  font-weight: 700;
+  white-space: nowrap;
+  transition:
+    transform 160ms ease,
+    box-shadow 160ms ease,
+    border-color 160ms ease;
+}
+
+.event-link:hover {
+  transform: translateY(-1px);
+  border-color: rgba(198, 137, 68, 0.32);
+  box-shadow: 0 12px 26px rgba(20, 38, 61, 0.08);
 }
 
 .pastor-highlights {
@@ -1262,7 +1382,7 @@ h3 {
   .session-grid,
   .children-gallery,
   .detail-grid,
-  .events-grid {
+  .event-overview {
     grid-template-columns: 1fr;
   }
 
@@ -1283,7 +1403,8 @@ h3 {
 @media (max-width: 900px) {
   .story-grid,
   .offering-foundation-grid,
-  .sunday-school-grid {
+  .sunday-school-grid,
+  .event-year-group {
     grid-template-columns: 1fr;
   }
 
@@ -1366,6 +1487,21 @@ h3 {
 
   .timeline-item {
     grid-template-columns: 1fr;
+  }
+
+  .event-year {
+    position: static;
+    justify-content: flex-start;
+    width: fit-content;
+  }
+
+  .event-row {
+    grid-template-columns: 78px 1fr;
+  }
+
+  .event-link {
+    grid-column: 2;
+    justify-self: start;
   }
 
   .gallery-main img {
