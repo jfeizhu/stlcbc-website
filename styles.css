@@ -974,6 +974,73 @@ h3 {
   margin-top: 22px;
 }
 
+.sunday-school-grid {
+  grid-template-columns: 0.9fr 1.1fr;
+  margin-top: 18px;
+}
+
+.session-grid,
+.children-gallery {
+  display: grid;
+  gap: 18px;
+}
+
+.session-grid {
+  grid-template-columns: 1fr 1fr;
+  margin-top: 18px;
+}
+
+.session-card {
+  background: rgba(255, 255, 255, 0.84);
+  border: 1px solid rgba(20, 38, 61, 0.08);
+  border-radius: 24px;
+  padding: 26px;
+  box-shadow: 0 18px 44px rgba(20, 38, 61, 0.07);
+}
+
+.session-card h3 {
+  margin: 0 0 14px;
+  color: var(--navy);
+  font-size: 1.35rem;
+}
+
+.session-card p {
+  margin: 0 0 14px;
+}
+
+.session-list {
+  margin: 0;
+  padding-left: 20px;
+  display: grid;
+  gap: 10px;
+  color: var(--text);
+}
+
+.session-list + .session-list {
+  margin-top: 18px;
+}
+
+.fancy-list {
+  padding-left: 0;
+  list-style: none;
+}
+
+.fancy-list li::before {
+  content: "❖ ";
+  color: var(--brand);
+  font-weight: 700;
+}
+
+.session-tag-alt {
+  background: rgba(232, 184, 109, 0.18) !important;
+  color: #a15c00 !important;
+}
+
+.children-gallery {
+  grid-template-columns: 1fr 1fr;
+  margin-top: 18px;
+}
+
 .pastor-highlights {
   grid-template-columns: repeat(3, 1fr);
 }
@@ -1119,7 +1186,9 @@ h3 {
   .profile-grid,
   .pastor-highlights,
   .hiring-contact-list,
-  .offering-method-grid {
+  .offering-method-grid,
+  .session-grid,
+  .children-gallery {
     grid-template-columns: 1fr;
   }
 
@@ -1139,7 +1208,8 @@ h3 {
 
 @media (max-width: 900px) {
   .story-grid,
-  .offering-foundation-grid {
+  .offering-foundation-grid,
+  .sunday-school-grid {
     grid-template-columns: 1fr;
   }
 
