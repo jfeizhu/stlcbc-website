@@ -1082,6 +1082,37 @@ h3 {
   font-weight: 600;
 }
 
+.events-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 18px;
+  margin-top: 18px;
+}
+
+.event-card {
+  background: rgba(255, 255, 255, 0.84);
+  border: 1px solid rgba(20, 38, 61, 0.08);
+  border-radius: 24px;
+  padding: 24px;
+  box-shadow: 0 18px 44px rgba(20, 38, 61, 0.07);
+}
+
+.event-date {
+  margin-bottom: 10px;
+  font-size: 12px;
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+  color: var(--brand);
+  font-weight: 800;
+}
+
+.event-card h3 {
+  margin: 0 0 18px;
+  color: var(--navy);
+  font-size: 1.2rem;
+  line-height: 1.35;
+}
+
 .pastor-highlights {
   grid-template-columns: repeat(3, 1fr);
 }
@@ -1230,7 +1261,8 @@ h3 {
   .offering-method-grid,
   .session-grid,
   .children-gallery,
-  .detail-grid {
+  .detail-grid,
+  .events-grid {
     grid-template-columns: 1fr;
   }
 
