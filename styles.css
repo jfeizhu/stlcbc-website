@@ -405,13 +405,23 @@ h3 {
   color: rgba(255, 250, 246, 0.87);
 }
 
-.hero-latest-event {
+.hero-latest-grid {
   margin-top: 24px;
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 14px;
+}
+
+.hero-latest-event {
   padding: 18px 20px;
   border-radius: 24px;
   background: rgba(255, 246, 238, 0.14);
   border: 1px solid rgba(255, 238, 229, 0.2);
   backdrop-filter: blur(8px);
+}
+
+.hero-latest-fellowship {
+  background: rgba(255, 249, 242, 0.12);
 }
 
 .hero-latest-label {
@@ -441,6 +451,10 @@ h3 {
   display: flex;
   flex-wrap: wrap;
   gap: 12px;
+}
+
+.hero-latest-browse {
+  margin-top: 14px;
 }
 
 .hero-actions {
