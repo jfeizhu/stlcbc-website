@@ -465,6 +465,12 @@ h3 {
 
 .hero-latest-browse {
   margin-top: 14px;
+  display: flex;
+  justify-content: center;
+}
+
+.hero-latest-browse .btn {
+  min-width: 240px;
 }
 
 .hero-actions {
