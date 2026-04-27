@@ -1326,6 +1326,48 @@ h3 {
   background: #edf2f7;
 }
 
+.fellowship-card-preview {
+  width: 100%;
+  height: 240px;
+  border-radius: 18px;
+  display: grid;
+  align-content: center;
+  justify-items: start;
+  gap: 10px;
+  padding: 24px;
+  background:
+    radial-gradient(circle at top right, rgba(239, 196, 139, 0.34), transparent 34%),
+    linear-gradient(145deg, #fff4ea, #fffdf8);
+  border: 1px solid rgba(33, 52, 75, 0.08);
+}
+
+.fellowship-card-file {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 54px;
+  height: 32px;
+  padding: 0 12px;
+  border-radius: 999px;
+  background: linear-gradient(135deg, #eb8f74, var(--brand));
+  color: #fff;
+  font-size: 0.8rem;
+  font-weight: 800;
+  letter-spacing: 0.12em;
+}
+
+.fellowship-card-preview strong {
+  color: var(--navy);
+  font-size: 1.35rem;
+  line-height: 1.1;
+}
+
+.fellowship-card-preview span {
+  color: var(--muted);
+  font-size: 0.98rem;
+  font-weight: 600;
+}
+
 .fellowship-card-copy h3 {
   margin: 0;
   color: var(--navy);
