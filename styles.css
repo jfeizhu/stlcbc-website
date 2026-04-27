@@ -344,16 +344,25 @@ h3 {
 
 .hero h1 {
   margin: 0;
+  font-family:
+    "Fraunces",
+    "Noto Serif SC",
+    Georgia,
+    serif;
   font-size: clamp(2.5rem, 5vw, 4.7rem);
-  line-height: 0.98;
-  letter-spacing: -0.04em;
-  max-width: 11ch;
+  font-weight: 700;
+  line-height: 1.02;
+  letter-spacing: -0.045em;
+  max-width: 10ch;
+  text-wrap: balance;
+  text-shadow: 0 8px 24px rgba(6, 14, 24, 0.18);
 }
 
 .hero .cn {
   margin-top: 18px;
   font-size: clamp(1.15rem, 2vw, 1.7rem);
   font-weight: 700;
+  letter-spacing: 0.01em;
   color: #ffe7da;
 }
 
