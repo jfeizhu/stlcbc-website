@@ -1,15 +1,15 @@
 :root {
-  --bg: #f8f4ee;
-  --surface: rgba(255, 255, 255, 0.82);
-  --surface-strong: #ffffff;
-  --text: #1f2937;
-  --muted: #5b6472;
-  --brand: #ff5a5f;
-  --brand-dark: #e24a51;
-  --navy: #14263d;
-  --gold: #e8b86d;
-  --line: rgba(20, 38, 61, 0.1);
-  --shadow: 0 20px 50px rgba(20, 38, 61, 0.1);
+  --bg: #fbf4ec;
+  --surface: rgba(255, 255, 255, 0.9);
+  --surface-strong: #fffdf9;
+  --text: #253245;
+  --muted: #6a6a73;
+  --brand: #e77c63;
+  --brand-dark: #cf664f;
+  --navy: #21344b;
+  --gold: #efc48b;
+  --line: rgba(33, 52, 75, 0.09);
+  --shadow: 0 22px 48px rgba(89, 67, 47, 0.1);
   --radius: 24px;
   --max-width: 1180px;
   --content-width: 1080px;
@@ -38,13 +38,18 @@ body {
   background:
     radial-gradient(
       circle at top left,
-      rgba(255, 90, 95, 0.08),
-      transparent 28%
+      rgba(231, 124, 99, 0.12),
+      transparent 30%
     ),
     radial-gradient(
       circle at top right,
-      rgba(232, 184, 109, 0.12),
+      rgba(239, 196, 139, 0.14),
       transparent 24%
+    ),
+    radial-gradient(
+      circle at bottom left,
+      rgba(255, 234, 212, 0.5),
+      transparent 30%
     ),
     var(--bg);
   line-height: 1.7;
@@ -76,8 +81,8 @@ a {
   top: 0;
   z-index: 50;
   backdrop-filter: blur(18px);
-  background: rgba(248, 244, 238, 0.9);
-  border-bottom: 1px solid rgba(20, 38, 61, 0.08);
+  background: rgba(251, 244, 236, 0.88);
+  border-bottom: 1px solid rgba(33, 52, 75, 0.08);
 }
 
 .header-inner {
@@ -101,7 +106,7 @@ a {
   object-fit: contain;
   border-radius: 16px;
   background: white;
-  box-shadow: 0 8px 22px rgba(20, 38, 61, 0.08);
+  box-shadow: 0 10px 24px rgba(113, 83, 55, 0.12);
   padding: 6px;
 }
 
@@ -160,9 +165,9 @@ a {
 .nav-cta {
   padding: 10px 14px;
   border-radius: 999px;
-  background: var(--navy);
+  background: linear-gradient(135deg, var(--navy), #304965);
   color: white !important;
-  box-shadow: 0 10px 24px rgba(20, 38, 61, 0.14);
+  box-shadow: 0 14px 28px rgba(33, 52, 75, 0.16);
 }
 
 /* Dropdown */
@@ -182,10 +187,10 @@ a {
   position: absolute;
   top: calc(100% + 10px);
   left: 0;
-  background: rgba(255, 255, 255, 0.95);
+  background: rgba(255, 251, 246, 0.97);
   backdrop-filter: blur(16px);
   border-radius: 16px;
-  box-shadow: 0 20px 50px rgba(0, 0, 0, 0.12);
+  box-shadow: 0 22px 48px rgba(88, 68, 45, 0.14);
   padding: 10px 0;
   display: none;
   min-width: 260px;
@@ -214,7 +219,7 @@ a {
 }
 
 .dropdown-menu a:hover {
-  background: rgba(255, 90, 95, 0.08);
+  background: rgba(231, 124, 99, 0.09);
   color: var(--brand);
   padding-left: 24px;
 }
@@ -254,19 +259,20 @@ a {
 }
 
 .btn-primary {
-  background: var(--brand);
+  background: linear-gradient(135deg, #eb8f74, var(--brand));
   color: white;
-  box-shadow: 0 12px 24px rgba(255, 90, 95, 0.22);
+  box-shadow: 0 14px 28px rgba(231, 124, 99, 0.24);
 }
 
 .btn-primary:hover {
-  background: var(--brand-dark);
+  background: linear-gradient(135deg, #df846a, var(--brand-dark));
 }
 
 .btn-secondary {
-  background: white;
+  background: rgba(255, 253, 249, 0.96);
   border: 1px solid var(--line);
   color: var(--navy);
+  box-shadow: 0 10px 22px rgba(96, 74, 50, 0.08);
 }
 
 /* Shared sections */
@@ -314,7 +320,7 @@ h3 {
 
 .panel {
   border-radius: 28px;
-  background: var(--surface);
+  background: linear-gradient(180deg, rgba(255, 255, 255, 0.92), rgba(255, 248, 242, 0.9));
   border: 1px solid rgba(255, 255, 255, 0.65);
   box-shadow: var(--shadow);
   backdrop-filter: blur(16px);
@@ -344,7 +350,7 @@ h3 {
 .hero-copy {
   position: relative;
   background:
-    linear-gradient(135deg, rgba(20, 38, 61, 0.97), rgba(20, 38, 61, 0.84)),
+    linear-gradient(135deg, rgba(33, 52, 75, 0.92), rgba(88, 63, 47, 0.74)),
     url("images/kids.jpg") center/cover;
   color: white;
   padding: 54px;
@@ -361,8 +367,8 @@ h3 {
   width: fit-content;
   padding: 10px 14px;
   border-radius: 999px;
-  background: rgba(255, 255, 255, 0.12);
-  border: 1px solid rgba(255, 255, 255, 0.18);
+  background: rgba(255, 247, 241, 0.16);
+  border: 1px solid rgba(255, 240, 229, 0.2);
   font-size: 13px;
   font-weight: 700;
   margin-bottom: 24px;
@@ -389,22 +395,22 @@ h3 {
   font-size: clamp(1.15rem, 2vw, 1.7rem);
   font-weight: 700;
   letter-spacing: 0.01em;
-  color: #ffe7da;
+  color: #ffe6cf;
 }
 
 .hero .lead {
   margin: 18px 0 0;
   max-width: 56ch;
   font-size: 1.05rem;
-  color: rgba(255, 255, 255, 0.86);
+  color: rgba(255, 250, 246, 0.87);
 }
 
 .hero-latest-event {
   margin-top: 24px;
   padding: 18px 20px;
   border-radius: 24px;
-  background: rgba(255, 255, 255, 0.11);
-  border: 1px solid rgba(255, 255, 255, 0.16);
+  background: rgba(255, 246, 238, 0.14);
+  border: 1px solid rgba(255, 238, 229, 0.2);
   backdrop-filter: blur(8px);
 }
 
@@ -452,8 +458,8 @@ h3 {
 }
 
 .meta-card {
-  background: rgba(255, 255, 255, 0.1);
-  border: 1px solid rgba(255, 255, 255, 0.14);
+  background: rgba(255, 247, 241, 0.12);
+  border: 1px solid rgba(255, 241, 232, 0.16);
   border-radius: 20px;
   padding: 16px;
 }
@@ -491,10 +497,10 @@ h3 {
   bottom: 22px;
   padding: 18px 20px;
   border-radius: 22px;
-  background: rgba(255, 255, 255, 0.82);
+  background: rgba(255, 251, 246, 0.86);
   backdrop-filter: blur(10px);
   color: var(--navy);
-  box-shadow: 0 10px 30px rgba(20, 38, 61, 0.1);
+  box-shadow: 0 16px 32px rgba(95, 73, 49, 0.12);
 }
 
 .photo-note strong {
@@ -521,7 +527,7 @@ h3 {
 }
 
 .hiring-panel {
-  background: linear-gradient(135deg, #fff6ef, #ffffff 60%);
+  background: linear-gradient(135deg, #fff3ea, #fffdf8 62%);
 }
 
 .section-tight {
@@ -557,10 +563,10 @@ h3 {
   justify-content: center;
   padding: 12px 16px;
   border-radius: 14px;
-  background: var(--navy);
+  background: linear-gradient(135deg, var(--navy), #304965);
   color: white;
   font-weight: 700;
-  box-shadow: 0 10px 24px rgba(20, 38, 61, 0.12);
+  box-shadow: 0 12px 26px rgba(33, 52, 75, 0.14);
 }
 
 .download-link:hover {
@@ -570,8 +576,8 @@ h3 {
 .contact-item {
   padding: 16px 18px;
   border-radius: 20px;
-  background: rgba(20, 38, 61, 0.04);
-  border: 1px solid rgba(20, 38, 61, 0.06);
+  background: rgba(255, 248, 241, 0.78);
+  border: 1px solid rgba(231, 124, 99, 0.08);
 }
 
 .contact-item span {
@@ -593,16 +599,16 @@ h3 {
 .schedule-card {
   border-radius: 26px;
   padding: 24px;
-  background: white;
-  border: 1px solid rgba(20, 38, 61, 0.08);
-  box-shadow: 0 18px 44px rgba(20, 38, 61, 0.07);
+  background: linear-gradient(180deg, #fffefc, #fff6ef);
+  border: 1px solid rgba(33, 52, 75, 0.06);
+  box-shadow: 0 18px 42px rgba(98, 75, 51, 0.08);
 }
 
 .schedule-card .tag {
   display: inline-block;
   padding: 6px 10px;
   border-radius: 999px;
-  background: rgba(255, 90, 95, 0.1);
+  background: rgba(231, 124, 99, 0.12);
   color: var(--brand);
   font-size: 12px;
   font-weight: 800;
@@ -664,7 +670,9 @@ h3 {
 
 .ministries {
   padding: 78px 0;
-  background: linear-gradient(180deg, var(--navy), #1b3553);
+  background:
+    radial-gradient(circle at top left, rgba(239, 196, 139, 0.14), transparent 28%),
+    linear-gradient(180deg, #23364d, #2a4058);
   color: white;
 }
 
@@ -691,8 +699,8 @@ h3 {
 .ministry-card {
   border-radius: 24px;
   padding: 24px;
-  background: rgba(255, 255, 255, 0.08);
-  border: 1px solid rgba(255, 255, 255, 0.1);
+  background: rgba(255, 250, 245, 0.09);
+  border: 1px solid rgba(255, 237, 224, 0.14);
   backdrop-filter: blur(10px);
 }
 
@@ -739,7 +747,7 @@ h3 {
   align-items: stretch;
   padding: 22px;
   border-radius: 30px;
-  background: linear-gradient(135deg, #fff4ee, #ffffff 60%);
+  background: linear-gradient(135deg, #fff2e8, #fffdf8 60%);
   border: 1px solid rgba(20, 38, 61, 0.08);
   box-shadow: var(--shadow);
 }
@@ -762,7 +770,7 @@ h3 {
 }
 
 .visit-box {
-  background: var(--navy);
+  background: linear-gradient(145deg, #263b53, #31506f);
   color: white;
   border-radius: 24px;
   padding: 26px;
@@ -791,8 +799,8 @@ h3 {
   position: relative;
   background: linear-gradient(
     135deg,
-    rgba(20, 38, 61, 0.97),
-    rgba(20, 38, 61, 0.84)
+    rgba(33, 52, 75, 0.94),
+    rgba(88, 63, 47, 0.75)
   );
   color: white;
   padding: 54px;
@@ -804,7 +812,7 @@ h3 {
   inset: 0;
   background: radial-gradient(
     circle at top right,
-    rgba(255, 90, 95, 0.22),
+    rgba(231, 124, 99, 0.2),
     transparent 30%
   );
   pointer-events: none;
@@ -840,7 +848,7 @@ h3 {
 .timeline,
 .story-panel {
   border-radius: 28px;
-  background: var(--surface);
+  background: linear-gradient(180deg, rgba(255, 255, 255, 0.94), rgba(255, 248, 243, 0.92));
   border: 1px solid rgba(255, 255, 255, 0.65);
   box-shadow: var(--shadow);
   backdrop-filter: blur(16px);
@@ -882,8 +890,8 @@ h3 {
 .timeline-item,
 .belief-item,
 .lang-card {
-  background: rgba(255, 255, 255, 0.78);
-  border: 1px solid rgba(20, 38, 61, 0.08);
+  background: rgba(255, 252, 248, 0.86);
+  border: 1px solid rgba(33, 52, 75, 0.07);
 }
 
 .timeline-item {
