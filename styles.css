@@ -458,6 +458,11 @@ h3 {
   align-self: end;
 }
 
+.hero-latest-actions .btn {
+  width: 100%;
+  white-space: nowrap;
+}
+
 .hero-latest-browse {
   margin-top: 14px;
 }
