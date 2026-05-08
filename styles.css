@@ -1559,6 +1559,23 @@ h3 {
   color: var(--text);
 }
 
+.welcome-copy {
+  display: grid;
+  gap: 18px;
+  margin-top: 10px;
+}
+
+.welcome-copy p {
+  font-size: 1.05rem;
+  font-weight: 700;
+  line-height: 1.5;
+}
+
+.welcome-divider {
+  margin-top: 34px;
+  border-top: 4px solid rgba(33, 52, 75, 0.26);
+}
+
 /* History gallery + lightbox */
 .gallery {
   display: grid;
