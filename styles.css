@@ -1571,6 +1571,16 @@ h3 {
   line-height: 1.5;
 }
 
+.welcome-zh {
+  font-family:
+    "KaiTi",
+    "Kaiti TC",
+    "BiauKai",
+    "DFKai-SB",
+    serif;
+  letter-spacing: 0.02em;
+}
+
 .welcome-divider {
   margin-top: 34px;
   border-top: 4px solid rgba(33, 52, 75, 0.26);
