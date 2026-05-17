@@ -367,9 +367,7 @@ h3 {
 
 .hero-copy {
   position: relative;
-  background:
-    linear-gradient(135deg, rgba(33, 52, 75, 0.92), rgba(88, 63, 47, 0.74)),
-    url("images/kids.jpg") center/cover;
+  background: linear-gradient(135deg, rgba(33, 52, 75, 0.96), rgba(88, 63, 47, 0.82));
   color: white;
   padding: 54px;
   min-height: 640px;
