@@ -27,6 +27,7 @@ html {
 body {
   margin: 0;
   font-family:
+    "Source Sans 3",
     Inter,
     "Noto Sans SC",
     system-ui,
@@ -144,11 +145,28 @@ a {
   display: flex;
   align-items: center;
   gap: 16px;
+  font-family:
+    "Source Sans 3",
+    Inter,
+    sans-serif;
   font-size: 14px;
   font-weight: 700;
   letter-spacing: -0.015em;
   color: rgba(20, 38, 61, 0.72);
   white-space: nowrap;
+}
+
+.nav-zh {
+  font-family:
+    "KaiTi",
+    "Kaiti SC",
+    "Kaiti TC",
+    "BiauKai",
+    "DFKai-SB",
+    serif;
+  font-size: 1.08em;
+  font-weight: inherit;
+  letter-spacing: 0.02em;
 }
 
 .nav > a,
@@ -550,10 +568,158 @@ h3 {
   grid-template-columns: 1.08fr 0.92fr;
 }
 
+.welcome-contact-panel {
+  grid-column: 1 / -1;
+}
+
+.about-community {
+  position: relative;
+  overflow: hidden;
+  margin-bottom: 18px;
+  padding: 34px;
+  background:
+    linear-gradient(135deg, rgba(255, 255, 255, 0.96), rgba(255, 247, 238, 0.88));
+  border-color: rgba(231, 124, 99, 0.1);
+}
+
+.about-community::before {
+  content: "";
+  position: absolute;
+  inset: 0 auto 0 0;
+  width: 6px;
+  background: linear-gradient(180deg, var(--brand), var(--gold));
+}
+
+.about-vision {
+  background:
+    linear-gradient(135deg, rgba(255, 253, 249, 0.97), rgba(246, 249, 252, 0.92));
+}
+
+.about-vision::before {
+  background: linear-gradient(180deg, var(--navy), var(--brand));
+}
+
+.community-heading {
+  max-width: 860px;
+}
+
+.community-kicker,
+.community-language {
+  display: block;
+  color: var(--brand-dark);
+  font-size: 12px;
+  font-weight: 900;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+}
+
+.bilingual-heading {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.35em;
+  align-items: baseline;
+  margin: 6px 0 0;
+  color: var(--navy);
+  font-size: clamp(1.55rem, 2vw, 2.15rem);
+  line-height: 1.12;
+}
+
+.bilingual-heading .kaiti-inline {
+  font-size: 1em;
+}
+
+.community-copy-grid {
+  display: grid;
+  grid-template-columns: minmax(0, 0.9fr) minmax(0, 1.1fr);
+  gap: 30px;
+  margin-top: 26px;
+  padding-top: 24px;
+  border-top: 1px solid rgba(33, 52, 75, 0.1);
+}
+
+.community-copy {
+  min-width: 0;
+}
+
+.community-copy + .community-copy {
+  border-left: 1px solid rgba(33, 52, 75, 0.1);
+  padding-left: 30px;
+}
+
+.community-copy p {
+  max-width: 62ch;
+  color: var(--text);
+  font-size: 1.02rem;
+  line-height: 1.8;
+}
+
+.community-copy-zh p {
+  font-family:
+    "KaiTi",
+    "Kaiti TC",
+    "BiauKai",
+    "DFKai-SB",
+    serif;
+  font-size: 1.08rem;
+  letter-spacing: 0.02em;
+}
+
+.community-language {
+  margin-bottom: 10px;
+  color: var(--muted);
+}
+
+.welcome-contact-grid {
+  display: grid;
+  grid-template-columns: minmax(0, 0.85fr) minmax(0, 1.35fr);
+  gap: 28px;
+  align-items: start;
+}
+
+.contact-block {
+  border-left: 1px solid rgba(33, 52, 75, 0.12);
+  padding-left: 28px;
+  scroll-margin-top: 120px;
+}
+
+.contact-head {
+  display: flex;
+  justify-content: space-between;
+  gap: 16px;
+  align-items: center;
+}
+
+.contact-head h3 {
+  margin: 0;
+}
+
+.contact-map-link {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 38px;
+  padding: 8px 14px;
+  border-radius: 999px;
+  background: var(--navy);
+  color: white;
+  font-size: 0.85rem;
+  font-weight: 800;
+  box-shadow: 0 12px 26px rgba(33, 52, 75, 0.16);
+}
+
+.contact-map-link:hover {
+  background: #1a2d43;
+}
+
 .contact-list {
   display: grid;
   gap: 16px;
   margin-top: 20px;
+}
+
+.welcome-contact-panel .contact-list {
+  grid-template-columns: 1fr;
+  margin-top: 16px;
 }
 
 .hiring-panel {
@@ -571,7 +737,7 @@ h3 {
 }
 
 .hiring-contact-list {
-  grid-template-columns: repeat(3, 1fr);
+  grid-template-columns: 1fr;
 }
 
 .latest-event-panel {
@@ -604,13 +770,39 @@ h3 {
 }
 
 .contact-item {
-  padding: 16px 18px;
+  position: relative;
+  overflow: hidden;
+  padding: 18px 20px;
   border-radius: 20px;
-  background: rgba(255, 248, 241, 0.78);
-  border: 1px solid rgba(231, 124, 99, 0.08);
+  background:
+    linear-gradient(180deg, rgba(255, 255, 255, 0.86), rgba(255, 247, 238, 0.76));
+  border: 1px solid rgba(33, 52, 75, 0.08);
+  box-shadow: 0 14px 30px rgba(89, 67, 47, 0.08);
+  color: var(--navy);
 }
 
-.contact-item span {
+.contact-item::before {
+  content: "";
+  position: absolute;
+  inset: 0 auto 0 0;
+  width: 4px;
+  background: linear-gradient(180deg, var(--brand), var(--gold));
+}
+
+.contact-item-address {
+  grid-column: 1 / -1;
+  min-height: 104px;
+}
+
+.contact-item strong {
+  display: block;
+  font-size: clamp(1.15rem, 1.7vw, 1.45rem);
+  line-height: 1.2;
+  color: var(--navy);
+  margin-bottom: 4px;
+}
+
+.contact-item > span {
   display: block;
   font-size: 12px;
   text-transform: uppercase;
@@ -618,6 +810,82 @@ h3 {
   color: var(--muted);
   margin-bottom: 6px;
   font-weight: 700;
+}
+
+.contact-item a {
+  color: var(--navy);
+  font-weight: 800;
+}
+
+.contact-item .download-link {
+  color: white;
+}
+
+.contact-form {
+  display: grid;
+  gap: 14px;
+  margin-top: 16px;
+  padding: 18px;
+  border-radius: 22px;
+  background: rgba(255, 255, 255, 0.7);
+  border: 1px solid rgba(33, 52, 75, 0.08);
+  box-shadow: 0 16px 34px rgba(89, 67, 47, 0.07);
+}
+
+.form-row {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 12px;
+}
+
+.contact-form label {
+  display: grid;
+  gap: 6px;
+}
+
+.form-label {
+  color: var(--muted);
+  font-size: 12px;
+  font-weight: 800;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  white-space: nowrap;
+}
+
+.contact-form input,
+.contact-form textarea {
+  width: 100%;
+  border: 1px solid rgba(33, 52, 75, 0.12);
+  border-radius: 14px;
+  background: rgba(255, 253, 249, 0.95);
+  color: var(--text);
+  font: inherit;
+  font-size: 0.98rem;
+  letter-spacing: 0;
+  padding: 12px 14px;
+  resize: vertical;
+  text-transform: none;
+}
+
+.contact-form input:focus,
+.contact-form textarea:focus {
+  border-color: rgba(231, 124, 99, 0.72);
+  box-shadow: 0 0 0 4px rgba(231, 124, 99, 0.12);
+  outline: 0;
+}
+
+.contact-submit {
+  justify-self: start;
+  border: 0;
+  cursor: pointer;
+}
+
+.form-honeypot {
+  position: absolute;
+  left: -9999px;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
 }
 
 .schedule-grid {
@@ -786,9 +1054,58 @@ h3 {
   padding: 14px 10px 14px 10px;
 }
 
+.visit-copy h2 {
+  font-family:
+    "Source Sans 3",
+    Inter,
+    sans-serif;
+  color: var(--navy);
+  font-size: clamp(1.75rem, 2.6vw, 2.25rem);
+  font-weight: 900;
+  line-height: 1.2;
+  margin-bottom: 24px;
+}
+
 .visit-copy p {
-  color: var(--muted);
-  max-width: 50ch;
+  max-width: 64ch;
+}
+
+.visit-invitation {
+  display: grid;
+  gap: 18px;
+}
+
+.visit-invitation p {
+  font-family:
+    "Source Sans 3",
+    Inter,
+    sans-serif;
+  color: var(--text);
+  font-size: clamp(1.12rem, 1.5vw, 1.45rem);
+  font-weight: 800;
+  line-height: 1.55;
+}
+
+.visit-invitation .visit-invitation-zh {
+  font-family:
+    "KaiTi",
+    "Kaiti SC",
+    "Kaiti TC",
+    "BiauKai",
+    "DFKai-SB",
+    serif;
+  font-size: clamp(1.18rem, 1.6vw, 1.55rem);
+  letter-spacing: 0.02em;
+}
+
+.visit-copy .kaiti-inline {
+  font-family:
+    "KaiTi",
+    "Kaiti SC",
+    "Kaiti TC",
+    "BiauKai",
+    "DFKai-SB",
+    serif;
 }
 
 .visit-actions,
@@ -1571,7 +1888,8 @@ h3 {
   line-height: 1.5;
 }
 
-.welcome-zh {
+.welcome-zh,
+.kaiti-inline {
   font-family:
     "KaiTi",
     "Kaiti TC",
@@ -1579,6 +1897,9 @@ h3 {
     "DFKai-SB",
     serif;
   letter-spacing: 0.02em;
+  color: inherit;
+  font-size: 1.08em;
+  font-weight: inherit;
 }
 
 .welcome-divider {
@@ -1702,8 +2023,26 @@ h3 {
   .event-feature,
   .fellowship-grid,
   .event-archive-list,
-  .latest-event-meta {
+  .latest-event-meta,
+  .community-copy-grid,
+  .welcome-contact-grid,
+  .form-row,
+  .welcome-contact-panel .contact-list {
     grid-template-columns: 1fr;
+  }
+
+  .community-copy + .community-copy {
+    border-left: 0;
+    border-top: 1px solid rgba(33, 52, 75, 0.1);
+    padding-top: 24px;
+    padding-left: 0;
+  }
+
+  .contact-block {
+    border-left: 0;
+    border-top: 1px solid rgba(33, 52, 75, 0.12);
+    padding-top: 24px;
+    padding-left: 0;
   }
 
   .hero-copy,
