@@ -14,6 +14,9 @@
   --max-width: 1180px;
   --content-width: 1080px;
   --reading-width: 980px;
+  --font-zh:
+    "KaiTi", "Kaiti SC", "Kaiti TC", "BiauKai", "DFKai-SB",
+    "Noto Serif CJK SC", "Noto Serif SC", serif;
 }
 
 * {
@@ -144,12 +147,12 @@ a {
 .nav {
   display: flex;
   align-items: center;
-  gap: 16px;
+  gap: 12px;
   font-family:
     "Source Sans 3",
     Inter,
     sans-serif;
-  font-size: 14px;
+  font-size: 13px;
   font-weight: 700;
   letter-spacing: -0.015em;
   color: rgba(20, 38, 61, 0.72);
@@ -157,13 +160,7 @@ a {
 }
 
 .nav-zh {
-  font-family:
-    "KaiTi",
-    "Kaiti SC",
-    "Kaiti TC",
-    "BiauKai",
-    "DFKai-SB",
-    serif;
+  font-family: var(--font-zh);
   font-size: 1.08em;
   font-weight: inherit;
   letter-spacing: 0.02em;
@@ -181,7 +178,7 @@ a {
 }
 
 .nav-cta {
-  padding: 10px 14px;
+  padding: 9px 12px;
   border-radius: 999px;
   background: linear-gradient(135deg, var(--navy), #304965);
   color: white !important;
@@ -652,12 +649,7 @@ h3 {
 }
 
 .community-copy-zh p {
-  font-family:
-    "KaiTi",
-    "Kaiti TC",
-    "BiauKai",
-    "DFKai-SB",
-    serif;
+  font-family: var(--font-zh);
   font-size: 1.08rem;
   letter-spacing: 0.02em;
 }
@@ -1085,25 +1077,13 @@ h3 {
 }
 
 .visit-invitation .visit-invitation-zh {
-  font-family:
-    "KaiTi",
-    "Kaiti SC",
-    "Kaiti TC",
-    "BiauKai",
-    "DFKai-SB",
-    serif;
+  font-family: var(--font-zh);
   font-size: clamp(1.18rem, 1.6vw, 1.55rem);
   letter-spacing: 0.02em;
 }
 
 .visit-copy .kaiti-inline {
-  font-family:
-    "KaiTi",
-    "Kaiti SC",
-    "Kaiti TC",
-    "BiauKai",
-    "DFKai-SB",
-    serif;
+  font-family: var(--font-zh);
 }
 
 .visit-actions,
@@ -1348,7 +1328,8 @@ h3 {
 }
 
 .offering-foundation-grid {
-  grid-template-columns: 0.88fr 1.12fr;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  align-items: stretch;
   margin-top: 18px;
 }
 
@@ -1861,6 +1842,11 @@ h3 {
   color: var(--navy);
 }
 
+.story-grid .lang-card:first-child {
+  font-family: var(--font-zh);
+  letter-spacing: 0.02em;
+}
+
 .lang-card p + p {
   margin-top: 14px;
 }
@@ -1888,16 +1874,18 @@ h3 {
 
 .welcome-zh,
 .kaiti-inline {
-  font-family:
-    "KaiTi",
-    "Kaiti TC",
-    "BiauKai",
-    "DFKai-SB",
-    serif;
+  font-family: var(--font-zh);
   letter-spacing: 0.02em;
   color: inherit;
   font-size: 1.08em;
   font-weight: inherit;
+}
+
+:lang(zh),
+:lang(zh-Hans),
+:lang(zh-Hant) {
+  font-family: var(--font-zh);
+  letter-spacing: 0.02em;
 }
 
 .welcome-divider {
