@@ -1872,6 +1872,10 @@ h3 {
   line-height: 1.5;
 }
 
+.welcome-motto-line {
+  white-space: nowrap;
+}
+
 .welcome-zh,
 .kaiti-inline {
   font-family: var(--font-zh);
@@ -2124,6 +2128,10 @@ h3 {
   .story-panel,
   .panel {
     padding: 24px;
+  }
+
+  .welcome-motto-line {
+    white-space: normal;
   }
 
   .timeline-item {
